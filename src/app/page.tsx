@@ -1,9 +1,13 @@
 // app/page.tsx
 import Image from 'next/image';
-import socialsbutton from '@/components/SocialButton';
 import SocialButton from '@/components/SocialButton';
 import LinkedinIcon from '@/assets/linkedin.webp'
 import ProfilePic from '@/assets/pfp.jpeg'
+import Download from '@/assets/download.png'
+import DownloadButton from '@/components/DownloadButton';
+import GithubIcon from '@/assets/github.png'
+import ResumePDF from '@/assets/myresume.pdf'
+
 
 export default function Home() {
   return (
@@ -28,30 +32,41 @@ export default function Home() {
            text-whitefont-bold py-2 px-4 rounded">
             Contact Me
           </a>
-          <a href="#contact" className="bg-green-500 hover:bg-green-600
-           text-whitefont-bold py-2 px-4 rounded">
-            Contact Me
-          </a>
-          <button href="#contact" className="bg-green-500 hover:bg-green-600
-           text-whitefont-bold py-2 px-4 rounded">
-            Contact Me
-          </button>
 
-      <SocialButton
+        <SocialButton
             href="https://www.linkedin.com/in/samuil-iordachi-019320292/"
             icon= {LinkedinIcon}
             alt="LinkedIn"
-            label=""
+            label="LinkedIn"
+          />
+        <SocialButton
+            href="https://github.com/SqmL1"
+            icon= {GithubIcon}
+            alt="Github"
+            label="Github"
+          />
+          <DownloadButton
+            href=""
+            icon= {Download}
+            alt="Resume"
+            label="Resume"
           />
         </div>
+
+        
       </div>
+      
+      
+      
+      
+
 
       <section id="projects" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4 text-emerald-600">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded shadow">
             <h3 className="text-xl font-semibold mb-2 text-emerald-600 ">Project 1</h3>
-            <p className='text-emerald-600'>Short description of your project</p>
+            <p className='text-emerald-600'>Description</p>
           </div>
           {/* Repeat for other projects */}
         </div>
